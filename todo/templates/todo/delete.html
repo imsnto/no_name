@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %} 
+
+
+{% block title %}
+    {{title}}
+{% endblock title %}
+
+{% block header %}
+    <div class="card text-bg-danger" style="width: 18rem;">
+        <div class="card-body ">
+        <h5 class="card-title">{{item.title}}</h5>
+        <p class="card-text">{{item.description}}</p>
+        <small> {{item.created_date}}(created) </small>
+        {% if item.modified_date %} <br>
+            <small> {{item.modified_date}}(modified) </small>
+        {% endif %}
+        </div>
+    </div>
+
+{% endblock header %}
